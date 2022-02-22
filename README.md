@@ -71,4 +71,72 @@ F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 
 ## Deliverable Two 
 
+**Summary Statistics on Suspension Coils**
 
+
+<img width="329" alt="total_summary" src="https://user-images.githubusercontent.com/92737670/155034895-0c224a4a-150a-4433-96cd-cced034d0da7.png">
+
+
+<img width="494" alt="lot_summary" src="https://user-images.githubusercontent.com/92737670/155045176-f86a0177-5871-4f1d-9069-5f9f079eb4e1.png">
+
+
+## Deliverable Three 
+
+t.test(log10(susp_coils$PSI),mu=mean(log10(total_summary$Mean)))
+
+	One Sample t-test
+
+data:  log10(susp_coils$PSI)
+t = -0.032082, df = 149, p-value = 0.9744
+alternative hypothesis: true mean is not equal to 3.175738
+95 percent confidence interval:
+ 3.175361 3.176103
+sample estimates:
+mean of x 
+ 3.175732 
+ 
+ 
+ 
+lot_one = subset(susp_coils, Manufacturing_Lot=="Lot1")
+
+	One Sample t-test
+
+data:  log10(lot_one$PSI)
+t = 8.7174, df = 49, p-value
+= 1.561e-11
+alternative hypothesis: true mean is not equal to 3.175738
+95 percent confidence interval:
+ 3.176010 3.176173
+sample estimates:
+mean of x 
+ 3.176091 
+
+
+lot_two = subset(susp_coils, Manufacturing_Lot=="Lot2")
+
+One Sample t-test
+
+data:  log10(lot_two$PSI)
+t = 3.6693, df = 49, p-value
+= 0.0005995
+alternative hypothesis: true mean is not equal to 3.175738
+95 percent confidence interval:
+ 3.175924 3.176373
+sample estimates:
+mean of x 
+ 3.176148 
+
+
+lot_three = subset(susp_coils, Manufacturing_Lot=="Lot3")
+
+One Sample t-test
+
+data:  log10(lot_three$PSI)
+t = -1.4558, df = 49, p-value
+= 0.1518
+alternative hypothesis: true mean is not equal to 3.175738
+95 percent confidence interval:
+ 3.173877 3.176035
+sample estimates:
+mean of x 
+ 3.174956
