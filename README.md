@@ -25,9 +25,15 @@ The R-squared value is 0.7149. Therefore, our model predicts mpg correctly aroun
 
 <img width="494" alt="lot_summary" src="https://user-images.githubusercontent.com/92737670/155045176-f86a0177-5871-4f1d-9069-5f9f079eb4e1.png">
 
-
+Lot 1 and 2 meet the design specifications (variance NTE 100 pounds per sq. in.), but Lot 3 exceeds the allowable variance.
 
 ## Deliverable Three 
+
+**T-Tests on Suspension Coils**
+
+The P value of Lot 1 and Lot 2 are both below .05, therefore there is a statistical difference at those Lots. However, the P value of Lot 3 is above .05, and therefore the means are statistically similar.
+
+**Population**
 
 t.test(log10(susp_coils$PSI),mu=mean(log10(total_summary$Mean)))
 
@@ -42,7 +48,7 @@ sample estimates:
 mean of x 
  3.175732 
  
- 
+ **Lot One**
  
 lot_one = subset(susp_coils, Manufacturing_Lot=="Lot1")
 
@@ -58,6 +64,7 @@ sample estimates:
 mean of x 
  3.176091 
 
+**Lot Two**
 
 lot_two = subset(susp_coils, Manufacturing_Lot=="Lot2")
 
@@ -73,6 +80,7 @@ sample estimates:
 mean of x 
  3.176148 
 
+**Lot Three*
 
 lot_three = subset(susp_coils, Manufacturing_Lot=="Lot3")
 
@@ -87,3 +95,4 @@ alternative hypothesis: true mean is not equal to 3.175738
 sample estimates:
 mean of x 
  3.174956
+ 
